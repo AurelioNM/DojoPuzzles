@@ -3,9 +3,14 @@ package main.Dojo;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+// Seu desafio é fazer um programa que leia o valor total a ser pago e o valor efetivamente pago,
+// informando o menor número de cédulas e moedas que devem ser fornecidas como troco.
+
 public class rascunho2 {
+
+
     public static void main(String[] args) {
-        int[] notasEMoedas = {10000, 5000, 2000, 1000, 500, 200, 100, 50, 25, 10, 5, 1};
+        int[] notasEMoedas = {10000, 5000, 1000, 500, 100, 50, 10, 5, 1};
 
         double troco = 90.64;
 
@@ -32,11 +37,13 @@ public class rascunho2 {
 
             String tipo;
             if (notaMoeda > 1) {
-                tipo = "nota";
+                tipo = "nota(s)";
             } else {
-                tipo = "moeda";
+                tipo = "moeda(s)";
             }
-            System.out.printf("%d %s%s de %.2f\n", qtd, tipo, qtd > 1 ? "s" : "", notaMoeda);
+
+            System.out.println();
+            System.out.printf("%d %s de %.2f \n", qtd, tipo, notaMoeda);
         }
 
 
