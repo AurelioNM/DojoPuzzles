@@ -1,4 +1,4 @@
-package main.Intelitrader.CalculandoEstatisticasSimples.Main;
+package main.Dojo.CalculandoEstatisticasSimples.Main;
 
 import java.util.ArrayList;
 import java.util.Arrays;

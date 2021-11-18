@@ -1,6 +1,6 @@
-package main.Intelitrader.CalculandoEstatisticasSimples.Teste;
+package main.Dojo.CalculandoEstatisticasSimples.Teste;
 
-import main.Intelitrader.CalculandoEstatisticasSimples.Main.Estatisticas;
+import main.Dojo.CalculandoEstatisticasSimples.Main.Estatisticas;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -80,6 +80,5 @@ public class EstatisticasTeste {
         Assert.assertEquals(-324, stats.minimo);
         Assert.assertEquals(1919.4, stats.media, 0.1);
         Assert.assertEquals(5, stats.quantidadeNumeros);
-
     }
 }

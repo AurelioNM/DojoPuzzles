@@ -1,4 +1,4 @@
-package main.Intelitrader.CalculandoEstatisticasSimples.Main;
+package main.Dojo.CalculandoEstatisticasSimples.Main;
 
 public class Executavel {
     public static void main(String[] args) {
@@ -6,5 +6,6 @@ public class Executavel {
         Estatisticas stats = new Estatisticas();
         stats.constroiLista(324, -56, 765, 43, -32);
         stats.calculaTudo();
+
     }
 }

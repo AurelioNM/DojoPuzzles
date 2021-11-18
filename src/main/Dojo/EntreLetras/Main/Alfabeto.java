@@ -1,8 +1,7 @@
-package main.Intelitrader.EntreLetras.Main;
+package main.Dojo.EntreLetras.Main;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 
 public class Alfabeto {
 
@@ -12,6 +11,7 @@ public class Alfabeto {
     public Character letra2;
     public int numeroDaLetra1;
     public int numeroDaLetra2;
+    public int dif;
 
 
     public void constroiMapa(){
@@ -20,12 +20,12 @@ public class Alfabeto {
         }
     }
 
-    public void recebeLetras(Character um, Character dois){
-        letra1 = um;
-        letra2 = dois;
-
+    public void calculoEntreLetras(Character um, Character dois){
+        letra1 = Character.toLowerCase(um);
+        letra2 = Character.toLowerCase(dois);
         confereCaractere();
         conversor();
+        calculaDiferença();
         resultado();
     }
 
@@ -40,17 +40,19 @@ public class Alfabeto {
         numeroDaLetra2 = mapa.get(letra2.charValue());
     }
 
-    public void resultado(){
-        int dif;
+    public void calculaDiferença(){
         if (numeroDaLetra1 != numeroDaLetra2){
             dif = Math.abs(numeroDaLetra1 - numeroDaLetra2) - 1;
         } else {
             dif = Math.abs(numeroDaLetra1 - numeroDaLetra2);
         }
+    }
 
+    public void resultado() {
         if (numeroDaLetra1 > numeroDaLetra2) {
             System.out.println("'"+letra1+"',"+"'"+letra2+"' = "+
                     "Nao esta na ordem alfabetica!");
+
         } else if (numeroDaLetra1 <= numeroDaLetra2) {
             System.out.println("'"+letra1+"',"+"'"+letra2+"' = "+ dif );
         }
