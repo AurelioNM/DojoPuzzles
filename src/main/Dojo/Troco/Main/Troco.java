@@ -8,22 +8,24 @@ import java.util.Map;
 
 public class Troco {
 
-    int[] notasEMoedas = {1000, 5000, 1000, 500, 100, 50, 10, 5, 1};
-    Map<Double, Integer> valoresEQuantidade = new LinkedHashMap<>();
-    double valorTotal;
-    double valorPago;
-    double troco;
-    int trocoEmCentavos;
+    public int[] notasEMoedas = {10000, 5000, 1000, 500, 100, 50, 10, 5, 1};
+    public Map<Double, Integer> valoresEQuantidade = new LinkedHashMap<>();
+    public double valorTotal;
+    public double valorPago;
+    public double troco;
+    public int trocoEmCentavos;
 
     public void pagamento(double total, double pago) {
         valorTotal = total;
         valorPago = pago;
-        troco = valorTotal - valorPago;
+        troco = valorPago - valorTotal;
+        troco = Math.round(troco * 100.0)/100.0; //Duas casas decimais
         trocoEmCentavos = (int) (troco * 100);
 
         System.out.println("==================================================");
         System.out.println("Valor Total:  " + valorTotal + "      Valor Pago: " + valorPago);
-        System.out.println("Troco: ");
+        System.out.println("Troco: " + troco);
+
         analiseTroco();
         devolveTroco();
     }
@@ -58,14 +60,5 @@ public class Troco {
             System.out.println(qtd + " " + tipoTroco + " de " + notaMoeda);
         }
         System.out.println("==================================================");
-    }
-
-
-    public static void main(String[] args) {
-        Troco testando = new Troco();
-
-        testando.pagamento(14300, 5334.65);
-
-
     }
 }

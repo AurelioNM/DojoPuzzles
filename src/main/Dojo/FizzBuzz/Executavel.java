@@ -2,7 +2,6 @@ package main.Dojo.FizzBuzz;
 
 public class Executavel {
     public static void main(String[] args) {
-
         int[] lista = new int[101];
 
         for (int i = 1; i <= 100; i++) {
@@ -17,9 +16,5 @@ public class Executavel {
                 System.out.println(lista[i]);
             }
         }
-
-
-
-
     }
 }
