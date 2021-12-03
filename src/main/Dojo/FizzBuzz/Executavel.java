@@ -11,7 +11,9 @@ public class Executavel {
             } else if (lista[i]%5 == 0) {
                 System.out.println("Buzz");
             } else if (lista[i]%3 == 0) {
+
                 System.out.println("Fizz");
+
             } else {
                 System.out.println(lista[i]);
             }

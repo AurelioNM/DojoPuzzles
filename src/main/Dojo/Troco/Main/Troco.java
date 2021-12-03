@@ -9,11 +9,16 @@ import java.util.Map;
 public class Troco {
 
     public int[] notasEMoedas = {10000, 5000, 1000, 500, 100, 50, 10, 5, 1};
+
     public Map<Double, Integer> valoresEQuantidade = new LinkedHashMap<>();
+
     public double valorTotal;
     public double valorPago;
     public double troco;
     public int trocoEmCentavos;
+
+
+
 
     public void pagamento(double total, double pago) {
         valorTotal = total;
@@ -36,13 +41,11 @@ public class Troco {
                 int qtd = trocoEmCentavos / notaAtual;
                 valoresEQuantidade.put((notaAtual / 100.0), qtd);
                 trocoEmCentavos = trocoEmCentavos % notaAtual;
-
                 if (trocoEmCentavos == 0) {
                     break;
                 }
             }
         }
-
     }
 
     public void devolveTroco() {
@@ -60,5 +63,14 @@ public class Troco {
             System.out.println(qtd + " " + tipoTroco + " de " + notaMoeda);
         }
         System.out.println("==================================================");
+    }
+
+
+
+    public static void main(String[] args) {
+
+
+        Troco testando = new Troco();
+        testando.pagamento(534.65, 700.00);
     }
 }

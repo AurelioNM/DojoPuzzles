@@ -11,8 +11,6 @@ public class Caixa {
 
     public void sacar(int valor){
 
-
-
         this.valor = valor;
         System.out.println("=========================================================================");
         System.out.println("Valor do saque: R$" + valor + ",00");
